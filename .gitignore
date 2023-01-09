@@ -5,6 +5,11 @@
 /.pnp
 .pnp.js
 
+# personal
+/design
+*.md
+!README.md
+
 # testing
 /coverage
 
