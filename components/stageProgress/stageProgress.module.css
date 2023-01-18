@@ -1,7 +1,7 @@
 .container{
   width: 100%;
   padding: 2em 0;
-  padding-bottom: 4em;
+  padding-bottom: 5em;
   background-color: var(--purplishBlue);
   background-image: url('/images/bg-sidebar-mobile.svg');
   background-position: top center;
@@ -15,9 +15,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 80%;
+  max-width: 180px;
+  margin: 0 auto;
 }
 .progressListNum{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--white);
+  background-color: transparent;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-weight: 700;
 }
 .progressListExp{
   display: none;
