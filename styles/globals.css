@@ -1,24 +1,40 @@
-html,
-body {
-  padding: 0;
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+  --coolGray: #9699ab;
+  --lightGray: #d6d9e6;
+  --magnolia: #f0f6ff;
+  --alabaster: #fafbff;
+  --white: #ffffff;
+  --marineBlue: #02295a;
+  --purplishBlue: #473dff;
+  --pastelBlue: #adbeff;
+  --lightBlue: #bfe2fd;
+  --strawberryRed: #ed3548;
+}
+* {
   margin: 0;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+html, body {
+  height: 100%;
 }
-
-* {
-  box-sizing: border-box;
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
 }

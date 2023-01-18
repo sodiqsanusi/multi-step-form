@@ -2,8 +2,13 @@ import Head from 'next/head'
 
 export default function Home() {
   return (
-    <div>
-      Hi, Home page
-    </div>
+    <>
+      <Head>
+        <title>Multistep Form</title>
+      </Head>
+      <div>
+        Hi, Home page
+      </div>
+    </>  
   )
 }
