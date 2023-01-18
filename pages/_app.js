@@ -2,6 +2,7 @@ import '../styles/globals.css';
 import Head from 'next/head';
 import { Ubuntu } from '@next/font/google'
 import { GlobalProvider } from '../globalContext';
+import Layout from '../components/layout/layout';
 
 const ubuntu = Ubuntu({
   weight: ['400', '500', '700'],
@@ -16,7 +17,9 @@ function MyApp({ Component, pageProps }) {
           <meta name='author' content='Sodiq Sanusi'/>
           <meta name='description' content='A multistep form, designs gotten from frontend mentors and implemented directly'/>
         </Head>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </div>
     </GlobalProvider>
   )
