@@ -1,22 +1,24 @@
-import Head from 'next/head'
+import Head from "next/head";
 import { useContext, useEffect } from 'react'
 import { globalContext } from '../globalContext'
 
-export default function Home() {
+const FinishUp = () => {
 
   let {setStage} = useContext(globalContext);
   useEffect(() => {
-    setStage(1)
+    setStage(4)
   }, [])
 
   return (
     <>
       <Head>
-        <title>Multistep Form</title>
+        <title>Double checking your terms!</title>
       </Head>
-      <>
-        Hi, Home page
-      </>
-    </>  
-  )
+      <main>
+        Finishing Up!
+      </main>
+    </>
+  );
 }
+ 
+export default FinishUp;

@@ -2,21 +2,23 @@ import Head from 'next/head'
 import { useContext, useEffect } from 'react'
 import { globalContext } from '../globalContext'
 
-export default function Home() {
+const SelectPlan = () => {
 
   let {setStage} = useContext(globalContext);
   useEffect(() => {
-    setStage(1)
+    setStage(2)
   }, [])
 
-  return (
+  return ( 
     <>
       <Head>
-        <title>Multistep Form</title>
+        <title>Select your preferred plan</title>
       </Head>
-      <>
-        Hi, Home page
-      </>
-    </>  
-  )
+      <main>
+        Select your plan
+      </main>
+    </>
+  );
 }
+ 
+export default SelectPlan;

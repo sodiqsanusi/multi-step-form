@@ -1,22 +1,26 @@
-import Head from 'next/head'
+import Head from "next/head";
 import { useContext, useEffect } from 'react'
 import { globalContext } from '../globalContext'
 
-export default function Home() {
+
+const AddOns = () => {
 
   let {setStage} = useContext(globalContext);
   useEffect(() => {
-    setStage(1)
+    setStage(3)
   }, [])
 
   return (
     <>
       <Head>
-        <title>Multistep Form</title>
+        <title>Choose add-ons you want</title>
       </Head>
-      <>
-        Hi, Home page
-      </>
-    </>  
-  )
+      <main>
+        Add-ons!
+      </main>
+    </>
+    
+  );
 }
+ 
+export default AddOns;

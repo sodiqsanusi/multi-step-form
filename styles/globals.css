@@ -38,3 +38,8 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+#active11, #active22, #active33, #active44{
+  background-color: var(--pastelBlue);
+  color: var(--marineBlue);
+  border: none;
+}
