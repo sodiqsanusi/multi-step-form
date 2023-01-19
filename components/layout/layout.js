@@ -1,3 +1,4 @@
+import Footerish from '../footerish/footerish';
 import StageProgress from '../stageProgress/stageProgress';
 import styles from './layout.module.css';
 
@@ -6,6 +7,7 @@ const Layout = ({children}) => {
     <div className={styles.container}>
       <StageProgress />
       {children}
+      <Footerish />
     </div>
   );
 }

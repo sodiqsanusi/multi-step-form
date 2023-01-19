@@ -1,0 +1,33 @@
+.main{
+  margin-top: auto;
+  width: 100%;
+  background-color: var(--alabaster);
+  padding: 1em;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.container button{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+}.container button:first-of-type{
+  background-color: transparent;
+  color: var(--coolGray);
+}.container button:last-of-type{
+  background-color: var(--marineBlue);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5em 0;
+  width: 70%;
+  border-radius: 5px;
+  max-width: 100px;
+}
