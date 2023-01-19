@@ -20,6 +20,7 @@
 }.container button:first-of-type{
   background-color: transparent;
   color: var(--coolGray);
+  /* display: none; */
 }.container button:last-of-type{
   background-color: var(--marineBlue);
   color: var(--white);
@@ -30,4 +31,10 @@
   width: 70%;
   border-radius: 5px;
   max-width: 100px;
+  margin-left: auto;
+}
+#confirm{
+  background-color: var(--purplishBlue);
+}.container button:focus, .container button:hover{
+  filter: contrast(150%);
 }

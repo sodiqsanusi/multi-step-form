@@ -1,10 +1,13 @@
 import Head from 'next/head'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { globalContext } from '../globalContext'
 
 export default function Home() {
 
-  let {stage} = useContext(globalContext);
+  let {setStage} = useContext(globalContext);
+  useEffect(() => {
+    setStage(1)
+  }, [])
 
   return (
     <>
@@ -12,7 +15,7 @@ export default function Home() {
         <title>Multistep Form</title>
       </Head>
       <>
-        Hi, Home page {stage}
+        Hi, Home page
       </>
     </>  
   )

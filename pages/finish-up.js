@@ -12,7 +12,7 @@ const FinishUp = () => {
   return (
     <>
       <Head>
-        <title>Double checking your terms</title>
+        <title>Double checking your terms!</title>
       </Head>
       <main>
         Finishing Up!
