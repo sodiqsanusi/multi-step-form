@@ -16,7 +16,7 @@
   border: none;
   outline: none;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 400;
 }.container button:first-of-type{
   background-color: transparent;
   color: var(--coolGray);
