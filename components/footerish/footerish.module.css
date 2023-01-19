@@ -16,7 +16,7 @@
   border: none;
   outline: none;
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 500;
 }.container button:first-of-type{
   background-color: transparent;
   color: var(--coolGray);
@@ -27,7 +27,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: .5em 0;
+  padding: .75em 0;
   width: 70%;
   border-radius: 5px;
   max-width: 100px;

@@ -23,7 +23,8 @@ const Footerish = () => {
     let present = router.pathname;
     setNext(parseInt(getObjectKey(routes, present)) + 1);
     setPrevious(parseInt(getObjectKey(routes, present)) - 1);
-    console.log(present, next, routes[next], previous, routes[previous])
+    if(routes[next]) router.prefetch(routes[next]);
+    if(routes[previous]) router.prefetch(routes[next]);
   })
 
   let handleNext = () => {
@@ -38,9 +39,7 @@ const Footerish = () => {
     }
   }
 
-  if(!routes[next]){
-    return
-  }
+  if(!routes[next]) return
 
   return (
     <footer className={styles.main}>
