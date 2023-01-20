@@ -14,9 +14,9 @@ export default function Home() {
       <Head>
         <title>Multistep Form</title>
       </Head>
-      <>
+      <main>
         Hi, Home page
-      </>
+      </main>
     </>  
   )
 }

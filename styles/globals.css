@@ -39,7 +39,7 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 #active11, #active22, #active33, #active44{
-  background-color: var(--pastelBlue);
+  background-color: var(--lightBlue);
   color: var(--marineBlue);
   border: none;
 }
