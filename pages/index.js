@@ -1,7 +1,8 @@
-import Head from 'next/head'
-import { useContext, useEffect } from 'react'
-import { globalContext } from '../globalContext'
+import Head from 'next/head';
+import { useContext, useEffect } from 'react';
+import { globalContext } from '../globalContext';
 import Container from '../components/container/container';
+import styles from '../styles/index.module.css';
 
 export default function Home() {
 
@@ -19,21 +20,21 @@ export default function Home() {
         <h1>Personal info</h1>
         <h2>Please provide your name, email, address, and phone number</h2>
         <form>
-          <div>
+          <div className={styles.container}>
             <label htmlFor="name">Name</label>
             <input
              type="text" name="Name" id="name"
              placeholder='e.g. Stephen King'
             />
           </div>
-          <div>
+          <div className={styles.container}>
             <label htmlFor="email">Email Address</label>
             <input
              name="Email" id="email" type='email' 
              placeholder='e.g. stephenking@lorem.com'
             />
           </div>
-          <div>
+          <div className={styles.container}>
             <label htmlFor="number">Phone Number</label>
             <input
              type="text" name="Phone Number" id="number"
