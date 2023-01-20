@@ -1,0 +1,26 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  row-gap: .1em;
+  margin-bottom: .75em;
+}
+.container label{
+  color: var(--marineBlue);
+  font-size: .8rem;
+  font-weight: 500;
+}
+.container input{
+  cursor: pointer;
+  width: 100%;
+  outline: none;
+  border: 1px solid var(--lightGray);
+  padding: .5em 1em;
+  padding-right: 0;
+  border-radius: 5px;
+  color: var(--marineBlue);
+  font-weight: 500;
+}.container input::placeholder{
+  color: var(--coolGray);
+}.container input:hover, .container input:focus{
+  border-color: var(--marineBlue);
+}
