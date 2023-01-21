@@ -1,0 +1,12 @@
+.layout{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 1em;
+  flex-direction: column;
+}
+.layout button{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
