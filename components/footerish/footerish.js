@@ -44,8 +44,10 @@ const Footerish = () => {
   return (
     <footer className={styles.main}>
       <div className={styles.container}>
-        {routes[previous] && <button onClick={handlePrevious}>Go Back</button>}
-        <button id={(next == 5) ? styles.confirm : ''} onClick={handleNext}>{(next == 5) ?  'Confirm' :'Next Step'}</button>
+        {routes[previous] && <button onClick={handlePrevious} className={styles.diff}>Go Back</button>}
+        <button id={(next == 5) ? styles.confirm : ''} onClick={handleNext}>
+          {(next == 5) ?  'Confirm' :'Next Step'}
+        </button>
       </div>
     </footer>
   );

@@ -4,6 +4,7 @@
   justify-content: space-between;
   row-gap: 1em;
   flex-direction: column;
+  margin-bottom: 1.5em;
 }
 .layout button{
   cursor: pointer;
@@ -29,8 +30,7 @@
 }.dummy p:first-of-type{
   color: var(--coolGray);
   font-size: .85rem;
-}.dummy p:last-of-type{
-  display: none;
+}.dum{
   color: var(--marineBlue);
   font-size: .75rem;
   font-weight: 500;
@@ -38,5 +38,55 @@
 
 .chosen{
   border-color: var(--marineBlue);
+  background-color: var(--magnolia);
+}
+
+.switchContainer{
+  width: 100%;
   background-color: var(--alabaster);
+  border-radius: 5px;
+  padding: 1em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.switch{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+  max-width: 200px;
+}.switch p{
+  font-weight: 500;
+  color: var(--coolGray);
+}.switch p:first-of-type{
+  color: var(--marineBlue);
+}.switch button{
+  cursor: pointer;
+  position: relative;
+  width: 20%;
+  max-width: 40px;
+  height: 20px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--marineBlue);
+}.switch button span{
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10%;
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+.active p:last-of-type{
+  color: var(--marineBlue);
+}.active p:first-of-type{
+  color: var(--coolGray);
+}.active button span{
+  left: initial;
+  right: 10%;
 }
