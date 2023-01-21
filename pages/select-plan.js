@@ -27,7 +27,7 @@ const SelectPlan = () => {
         <section className={styles.layout}>
           <button>
             <div><Image src={arcadeImage} aria-hidden='true' alt='Pick the arcade plan'/></div>
-            <div>
+            <div className={styles.dummy}>
               <h3>Arcade</h3>
               <p>$9/mo</p>
               <p>2 months free</p>
@@ -35,7 +35,7 @@ const SelectPlan = () => {
           </button>
           <button>
             <div><Image src={advancedImage} aria-hidden='true' alt='Pick the advanced plan'/></div>
-            <div>
+            <div className={styles.dummy}>
               <h3>Advanced</h3>
               <p>$12/mo</p>
               <p>2 months free</p>
@@ -43,7 +43,7 @@ const SelectPlan = () => {
           </button>
           <button>
             <div><Image src={proImage} aria-hidden='true' alt='Pick the pro plan'/></div>
-            <div>
+            <div className={styles.dummy}>
               <h3>Pro</h3>
               <p>$15/mo</p>
               <p>2 months free</p>

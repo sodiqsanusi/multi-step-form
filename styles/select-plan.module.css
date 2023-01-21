@@ -6,7 +6,37 @@
   flex-direction: column;
 }
 .layout button{
+  cursor: pointer;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  column-gap: 1em;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid var(--lightGray);
+  border-radius: 8px;
+  padding: 1em;
+}.layout button:hover, .layout button:focus{
+  border-color: var(--marineBlue);
+}
+
+.dummy{
+  text-align: left;
+}.dummy h3{
+  color: var(--marineBlue);
+  font-size: 1rem;
+  font-weight: 500;
+}.dummy p:first-of-type{
+  color: var(--coolGray);
+  font-size: .85rem;
+}.dummy p:last-of-type{
+  display: none;
+  color: var(--marineBlue);
+  font-size: .75rem;
+  font-weight: 500;
+}
+
+.chosen{
+  border-color: var(--marineBlue);
+  background-color: var(--alabaster);
 }

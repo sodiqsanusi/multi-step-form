@@ -35,6 +35,8 @@
 }
 #confirm{
   background-color: var(--purplishBlue);
-}.container button:focus, .container button:hover{
+}.container button:last-of-type:focus, .container button:last-of-type:hover{
   filter: contrast(150%);
+}.container button:first-of-type:hover, .container button:first-of-type:focus{
+  color: var(--marineBlue);
 }
