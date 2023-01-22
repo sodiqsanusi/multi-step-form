@@ -1,7 +1,8 @@
 import Head from "next/head";
-import { useContext, useEffect } from 'react'
-import { globalContext } from '../globalContext'
+import { useContext, useEffect } from 'react';
+import { globalContext } from '../globalContext';
 import Container from "../components/container/container";
+import styles from '../styles/addons.module.css';
 
 
 const AddOns = () => {
@@ -19,26 +20,26 @@ const AddOns = () => {
       <Container>
         <h1>Pick add-ons</h1>
         <h2>Add-ons help enhance your gaming experience</h2>
-        <section>
-          <label htmlFor="onlineService">
+        <section className={styles.layout}>
+          <label htmlFor="onlineService" className={styles.addons}>
             <input type="checkbox" name="onlineService" id="onlineService"/>
-            <div>
+            <div className={styles.mid}>
               <h3>Online service</h3>
               <p>Access to multiplayer games</p>
             </div>
             <p>+$1/mo</p>
           </label>
-          <label htmlFor="largerStorage">
+          <label htmlFor="largerStorage" className={styles.addons}>
             <input type="checkbox" name="largerStorage" id="largerStorage"/>
-            <div>
+            <div className={styles.mid}>
               <h3>Larger storage</h3>
               <p>Extra 1TB of cloud save</p>
             </div>
             <p>+$2/mo</p>
           </label>
-          <label htmlFor="customProfile">
+          <label htmlFor="customProfile" className={styles.addons}>
             <input type="checkbox" name="customProfile" id="customProfile"/>
-            <div>
+            <div className={styles.mid}>
               <h3>Customizable profile</h3>
               <p>Custom theme on your profile</p>
             </div>
