@@ -1,0 +1,11 @@
+.container{
+  padding: 3em 0;
+  text-align: center;
+}
+.imageContainer img{
+  width: 100%;
+}.imageContainer{
+  margin: 0 auto .5em;
+  max-width: 90px;
+  width: 22%;
+}
