@@ -1,0 +1,76 @@
+.layout{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+.addons{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: .75em;
+  border: 1px solid var(--lightGray);
+  border-radius: 8px;
+  cursor: pointer;
+}.addons:hover, .addons:focus{
+  border-color: var(--marineBlue);
+}
+
+.mid{
+  width: 70%;
+  margin-left: auto;
+}.mid h3{
+  color: var(--marineBlue);
+  font-size: 1rem;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}.mid p{
+  color: var(--coolGray);
+  font-size: min(75%, .8rem);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.addons input[type=checkbox]{
+  appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid var(--lightGray);
+  border-radius: 5px;
+  width: 20%;
+  max-width: 20px;
+  height: 20px;
+}
+.addons input[type=checkbox]:focus{
+  outline: 1px solid rgba(0, 0, 0, 0.2);
+}.addons input[type=checkbox]:checked{
+  background-color: var(--purplishBlue);
+}
+
+.addons:has(input[type=checkbox]:checked){
+  background-color: var(--magnolia);
+  border-color: var(--purplishBlue);
+}
+
+.addons > p{
+  color: var(--purplishBlue);
+  width: 18%;
+  font-size: min(90%, .7rem);
+  font-weight: 500;
+  text-align: right;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+}
+
+.addons .checkmarkIcon{
+  position: absolute;
+  left: min(7.5%, 16px);
+}
