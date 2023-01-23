@@ -1,0 +1,62 @@
+.summary{
+  background-color: var(--alabaster);
+  padding: 1em .75em;
+  margin-bottom: 1em;
+  border-radius: 5px;
+}
+.total{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 .75em;
+}
+
+.summaryStart{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5em 0;
+  border-bottom: 1px solid var(--lightGray);
+}
+.summaryStart div h3{
+  color: var(--marineBlue);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: .8;
+}.summaryStart div a{
+  color: var(--coolGray);
+  font-size: .9rem;
+}.summaryStart div a:hover, .summaryStart div a:focus{
+  color: var(--purplishBlue);
+}
+.summaryStart > p{
+  color: var(--marineBlue);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.summaryEnd{
+  display: flex;
+  padding: .75em 0 .35em;
+  flex-direction: column;
+  row-gap: .5em;
+}.summaryEnd > div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.summaryEnd div p:first-of-type{
+  color: var(--coolGray);
+  font-size: .95rem;
+}.summaryEnd div p:last-of-type{
+  color: var(--marineBlue);
+}
+
+.total p:first-of-type{
+  color: var(--coolGray);
+  font-size: .95rem;
+}.total p:last-of-type{
+  color: var(--purplishBlue);
+  font-size: 1.1rem;
+  font-weight: 500;
+}

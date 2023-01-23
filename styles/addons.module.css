@@ -56,7 +56,7 @@
 
 .addons:has(input[type=checkbox]:checked){
   background-color: var(--magnolia);
-  border-color: var(--purplishBlue);
+  border-color: var(--marineBlue);
 }
 
 .addons > p{
