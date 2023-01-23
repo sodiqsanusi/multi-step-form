@@ -3,6 +3,8 @@ import { useContext, useEffect } from 'react';
 import { globalContext } from '../globalContext';
 import Container from "../components/container/container";
 import styles from '../styles/addons.module.css';
+import Image from "next/image";
+import checkmarkIcon from '../public/images/icon-checkmark.svg'
 
 
 const AddOns = () => {
@@ -23,6 +25,7 @@ const AddOns = () => {
         <section className={styles.layout}>
           <label htmlFor="onlineService" className={styles.addons}>
             <input type="checkbox" name="onlineService" id="onlineService"/>
+            <span className={styles.checkmarkIcon}><Image src={checkmarkIcon} aria-hidden='true'/></span>
             <div className={styles.mid}>
               <h3>Online service</h3>
               <p>Access to multiplayer games</p>
@@ -31,6 +34,7 @@ const AddOns = () => {
           </label>
           <label htmlFor="largerStorage" className={styles.addons}>
             <input type="checkbox" name="largerStorage" id="largerStorage"/>
+            <span className={styles.checkmarkIcon}><Image src={checkmarkIcon} aria-hidden='true'/></span>
             <div className={styles.mid}>
               <h3>Larger storage</h3>
               <p>Extra 1TB of cloud save</p>
@@ -39,6 +43,7 @@ const AddOns = () => {
           </label>
           <label htmlFor="customProfile" className={styles.addons}>
             <input type="checkbox" name="customProfile" id="customProfile"/>
+            <span className={styles.checkmarkIcon}><Image src={checkmarkIcon} aria-hidden='true'/></span>
             <div className={styles.mid}>
               <h3>Customizable profile</h3>
               <p>Custom theme on your profile</p>
