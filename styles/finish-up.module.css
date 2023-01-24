@@ -45,7 +45,7 @@
   align-items: center;
   justify-content: space-between;
 }
-.summaryEnd div p:first-of-type{
+.summaryEnd div p{
   color: var(--coolGray);
   font-size: .95rem;
 }.summaryEnd div p:last-of-type{
@@ -58,5 +58,5 @@
 }.total p:last-of-type{
   color: var(--purplishBlue);
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 700;
 }
