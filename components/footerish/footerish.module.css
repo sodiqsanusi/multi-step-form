@@ -47,5 +47,6 @@
     width: 90%;
     max-width: 495px;
     margin: auto;
+    background-color: transparent;
   }
 }
