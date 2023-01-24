@@ -27,7 +27,7 @@
 @media(min-width: 700px){
   .container{
     row-gap: .3em;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.25em;
   }.container label{
     font-size: .9rem;
   }.container input{
