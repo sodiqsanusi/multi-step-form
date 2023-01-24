@@ -41,3 +41,11 @@
 }.diff:hover, .diff:focus{
   color: var(--marineBlue) !important; 
 }
+
+@media(min-width: 700px){
+  .main{
+    width: 90%;
+    max-width: 570px;
+    margin: auto;
+  }
+}

@@ -26,6 +26,11 @@
     bottom: initial;
     box-shadow: none;
     margin: auto;
-    max-width: 500px;
+    margin-top: min(5%, 25px);
+    max-width: 570px;
+  }
+  .container h1{
+    font-size: 2rem;
+    line-height: 1.2;
   }
 }
