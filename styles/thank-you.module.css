@@ -9,3 +9,13 @@
   max-width: 90px;
   width: 22%;
 }
+
+@media(min-width: 700px){
+  .imageContainer{
+    max-width: 70px;
+    margin-bottom: 1.5em;
+  }
+  .container h1{
+    margin-bottom: 0.5em;
+  }
+}
