@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       <Container>
         <h1>Personal info</h1>
-        <h2>Please provide your name, email, address, and phone number</h2>
+        <h2>Please provide your name, email address, and phone number.</h2>
         <form>
           <div className={styles.container}>
             <label htmlFor="name">Name</label>

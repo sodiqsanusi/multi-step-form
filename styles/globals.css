@@ -43,3 +43,17 @@ p, h1, h2, h3, h4, h5, h6 {
   color: var(--marineBlue);
   border: none;
 }
+
+@media(min-width: 700px){
+  #root, #__next{
+    background-color: var(--magnolia);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root > div, #__next > div{
+    width: 90%;
+    max-width: 1000px;
+  }
+}

@@ -3,6 +3,7 @@
   width: 100%;
   background-color: var(--alabaster);
   padding: 1em;
+  grid-area: footerish;
 }
 
 .container{
@@ -39,4 +40,12 @@
   filter: contrast(150%);
 }.diff:hover, .diff:focus{
   color: var(--marineBlue) !important; 
+}
+
+@media(min-width: 700px){
+  .main{
+    width: 90%;
+    max-width: 495px;
+    margin: auto;
+  }
 }

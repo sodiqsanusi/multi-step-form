@@ -5,3 +5,17 @@
   background-color: var(--lightBlue);
   min-height: 100vh;
 }
+
+@media(min-width: 700px){
+  .container{
+    width: 100%;
+    display: grid;
+    min-height: initial;
+    border-radius: 12px;
+    padding: 1em;
+    grid-template-areas: "sidebar form form"
+                         "sidebar form form"
+                         "sidebar footerish footerish";
+    background-color: var(--white);
+  }
+}

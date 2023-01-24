@@ -23,3 +23,16 @@
 }.container input:hover, .container input:focus{
   border-color: var(--marineBlue);
 }
+
+@media(min-width: 700px){
+  .container{
+    row-gap: .3em;
+    margin-bottom: 1.25em;
+  }.container label{
+    font-size: .9rem;
+  }.container input{
+    padding: 0.75em 1em;
+    padding-right: 0%;
+    border-radius: 8px;
+  }
+}
