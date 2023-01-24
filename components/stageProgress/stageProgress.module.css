@@ -7,6 +7,7 @@
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
+  grid-area: sidebar;
 }
 
 .progressList{
@@ -33,4 +34,36 @@
 }
 .progressListExp{
   display: none;
+}
+
+@media(min-width: 700px){
+  .container{
+    border-radius: 12px;
+    background-image: url('../../public/images/bg-sidebar-desktop.svg');
+    max-width: 300px;
+    min-width: 205px;
+  }
+  .progressList{
+    flex-direction: column;
+    row-gap: 1.5em;
+    margin: 0%;
+    margin-top: 5%;
+    margin-left: 10%;
+  }.progressList li{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: min(10%, 1em);
+  }.progressListExp{
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }.progressListExp p:first-of-type{
+    color: var(--coolGray);
+    font-size: .75rem
+  }.progressListExp p:last-of-type{
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+  }
 }

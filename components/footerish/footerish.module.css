@@ -3,6 +3,7 @@
   width: 100%;
   background-color: var(--alabaster);
   padding: 1em;
+  grid-area: footerish;
 }
 
 .container{

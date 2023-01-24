@@ -7,6 +7,7 @@
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   bottom: 55px;
+  grid-area: form;
 }.container h1{
   color: var(--marineBlue);
   font-size: 1.5rem;
@@ -18,4 +19,13 @@
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 1em;
+}
+
+@media(min-width: 700px){
+  .container{
+    bottom: initial;
+    box-shadow: none;
+    margin: auto;
+    max-width: 500px;
+  }
 }
