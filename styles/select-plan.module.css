@@ -79,6 +79,8 @@
   height: 13px;
   background-color: var(--white);
   border-radius: 50%;
+}.switch button:hover span, .switch button:focus span{
+  outline: 1px solid var(--white);
 }
 
 .active p:last-of-type{
@@ -88,4 +90,17 @@
 }.active button span{
   left: initial;
   right: 10%;
+}
+
+
+@media(min-width: 700px){
+  .layout{
+    flex-direction: row;
+  }
+  .layout button{
+    width: 30%;
+    flex-direction: column;
+    row-gap: 2em;
+    padding: 1em min(3%, 1em);
+  }
 }
