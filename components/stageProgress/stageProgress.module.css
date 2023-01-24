@@ -42,6 +42,7 @@
     background-image: url('../../public/images/bg-sidebar-desktop.svg');
     max-width: 300px;
     min-width: 205px;
+    min-height: 500px;
   }
   .progressList{
     flex-direction: column;

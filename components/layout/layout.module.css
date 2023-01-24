@@ -8,8 +8,10 @@
 
 @media(min-width: 700px){
   .container{
+    width: 100%;
     display: grid;
-    height: 100%;
+    min-height: initial;
+    border-radius: 8px;
     padding: 1em;
     grid-template-areas: "sidebar form form"
                          "sidebar form form"
