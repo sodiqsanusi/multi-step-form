@@ -74,3 +74,18 @@
   position: absolute;
   left: min(7.5%, 16px);
 }
+
+@media(min-width: 700px){
+  .addons{
+    padding: 1em;
+  }
+  .addons > p{
+    font-size: .85rem;
+    font-weight: 400;
+  }
+  .addons .checkmarkIcon{
+    left: min(8%, 20px);
+  }.mid p{
+    font-size: .85rem;
+  }
+}
