@@ -20,7 +20,7 @@ const ThankYou = () => {
       </Head>
       <Container>
         <section className={styles.container}>
-          <div className={styles.imageContainer}><Image src={thankYouImage} aria-hidden='true'/></div>
+          <div className={styles.imageContainer}><Image src={thankYouImage} aria-hidden='true' alt=""/></div>
           <h1>Thank you!</h1>
           <h2>Thanks for confirming your subscription! We hope you have fun using our platform.
             If you ever need support, please feel free to email us at support@loremgaming.com.

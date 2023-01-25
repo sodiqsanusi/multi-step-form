@@ -60,7 +60,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
   }.progressListExp p:first-of-type{
-    color: var(--coolGray);
+    color: var(--lightGray);
     font-size: .75rem
   }.progressListExp p:last-of-type{
     color: var(--white);
