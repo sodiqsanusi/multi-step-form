@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { globalContext } from '../globalContext';
 import Container from "../components/container/container";
 import Link from "next/link";
@@ -8,10 +8,7 @@ import styles from '../styles/finish-up.module.css';
 const FinishUp = () => {
 
   let {setStage, addons, plan, renewal} = useContext(globalContext);
-  useEffect(() => {
-    setStage(4);
-    console.log(addons);
-  }, [])
+  let [total, setTotal] = useState(0);
 
   let choices = {
     arcade: {
@@ -70,6 +67,15 @@ const FinishUp = () => {
     }
   }
 
+  useEffect(() => {
+    setStage(4);
+    let lilac = 0
+    for(let num of addons){
+      lilac += addonDetails[num].tots();
+    }
+    setTotal(total + lilac + choices[plan].tots())
+  }, [])
+
   return (
     <>
       <Head>
@@ -99,7 +105,7 @@ const FinishUp = () => {
         </section>
         <div className={styles.total}>
           <p>Total (per {renewal})</p>
-          <p>$12/{renewalNames[renewal].short}</p>
+          <p>${total}/{renewalNames[renewal].short}</p>
         </div>
       </Container>
     </>
