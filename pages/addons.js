@@ -17,7 +17,7 @@ const AddOns = () => {
   let periods = {
     month: {
       change: 'year',
-      words: ['1mo', '2/mo', '2/mo']
+      words: ['1/mo', '2/mo', '2/mo']
     },
     year: {
       words: ['10/yr', '20/yr', '20/yr']
