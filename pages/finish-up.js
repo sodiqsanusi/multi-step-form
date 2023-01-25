@@ -46,8 +46,29 @@ const FinishUp = () => {
       short: 'yr'
     }
   }
-
-  console.log(renewalNames[renewal].long);
+  let addonDetails = {
+    0: {
+      name: 'Online service',
+      amount: 1,
+      tots() {
+        return renewal == 'month' ? this.amount : this.amount * 10 
+      }
+    },
+    1: {
+      name: 'Larger storage',
+      amount: 2,
+      tots() {
+        return renewal == 'month' ? this.amount : this.amount * 10 
+      }
+    },
+    2: {
+      name: 'Customizable profile',
+      amount: 2,
+      tots() {
+        return renewal == 'month' ? this.amount : this.amount * 10 
+      }
+    }
+  }
 
   return (
     <>
@@ -65,16 +86,16 @@ const FinishUp = () => {
             </div>
             <p>${choices[plan].tots()}/{renewalNames[renewal].short}</p>
           </div>
-          {/* <div className={styles.summaryEnd}>
-            <div>
-              <p>Online service</p>
-              <p>+$1/mo</p>
+          {addons && (
+            <div className={styles.summaryEnd}>
+              {addons.map(addonNumber => (
+                <div key={addonNumber}>
+                  <p>{addonDetails[addonNumber].name}</p>
+                  <p>+${addonDetails[addonNumber].tots()}/{renewalNames[renewal].short}</p>
+                </div>
+              ))}
             </div>
-            <div>
-              <p>Larger storage</p>
-              <p>+$2/mo</p>
-            </div>
-          </div> */}
+          )}
         </section>
         <div className={styles.total}>
           <p>Total (per {renewal})</p>
