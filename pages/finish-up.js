@@ -9,7 +9,7 @@ const FinishUp = () => {
 
   let {setStage} = useContext(globalContext);
   useEffect(() => {
-    setStage(4)
+    setStage(4);
   }, [])
 
   return (

@@ -57,7 +57,7 @@ const SelectPlan = () => {
         <h2>You have the option of monthly or yearly billing.</h2>
         <section className={styles.layout}>
           <button
-           className={plan == 'arcade' && styles.planActive}
+           className={plan == 'arcade' ? styles.planActive : undefined}
            onClick={() => handlePlanChange(1)}
           >
             <div><Image src={arcadeImage} aria-hidden='true' alt='Pick the arcade plan'/></div>
@@ -68,7 +68,7 @@ const SelectPlan = () => {
             </div>
           </button>
           <button
-           className={plan == 'advanced' && styles.planActive}
+           className={plan == 'advanced' ? styles.planActive : undefined}
            onClick={() => handlePlanChange(2)}
           >
             <div><Image src={advancedImage} aria-hidden='true' alt='Pick the advanced plan'/></div>
@@ -79,7 +79,7 @@ const SelectPlan = () => {
             </div>
           </button>
           <button
-           className={plan == 'pro' && styles.planActive}
+           className={plan == 'pro' ? styles.planActive : undefined}
            onClick={() => handlePlanChange(3)}
           >
             <div><Image src={proImage} aria-hidden='true' alt='Pick the pro plan'/></div>
