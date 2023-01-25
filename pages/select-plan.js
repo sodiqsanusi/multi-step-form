@@ -11,7 +11,7 @@ import proImage from '../public/images/icon-pro.svg';
 
 const SelectPlan = () => {
 
-  let {setStage, renewal, setRenewal} = useContext(globalContext);
+  let {setStage, renewal, setRenewal, plan, setPlan} = useContext(globalContext);
   useEffect(() => {
     setStage(2)
   }, [])
@@ -29,7 +29,22 @@ const SelectPlan = () => {
 
   let handleSwitch = () => {
     setRenewal(periods[renewal].change)
-    console.log('Clicked', periods[renewal].change)
+    // console.log('Clicked', periods[renewal].change)
+  }
+  let handlePlanChange = (num) => {
+    switch(num){
+      case 1:
+        setPlan('arcade');
+        break;
+      case 2:
+        setPlan('advanced');
+        break;
+      case 3:
+        setPlan('pro');
+        break;
+      default:
+        setPlan('arcade')
+    }
   }
 
   return ( 
@@ -41,7 +56,10 @@ const SelectPlan = () => {
         <h1>Select your plan</h1>
         <h2>You have the option of monthly or yearly billing.</h2>
         <section className={styles.layout}>
-          <button>
+          <button
+           className={plan == 'arcade' ? styles.planActive : undefined}
+           onClick={() => handlePlanChange(1)}
+          >
             <div><Image src={arcadeImage} aria-hidden='true' alt='Pick the arcade plan'/></div>
             <div className={styles.dummy}>
               <h3>Arcade</h3>
@@ -49,7 +67,10 @@ const SelectPlan = () => {
               {renewal == 'year' && <p className={styles.dum}>2 months free</p>}
             </div>
           </button>
-          <button>
+          <button
+           className={plan == 'advanced' ? styles.planActive : undefined}
+           onClick={() => handlePlanChange(2)}
+          >
             <div><Image src={advancedImage} aria-hidden='true' alt='Pick the advanced plan'/></div>
             <div className={styles.dummy}>
               <h3>Advanced</h3>
@@ -57,7 +78,10 @@ const SelectPlan = () => {
               {renewal == 'year' && <p className={styles.dum}>2 months free</p>}
             </div>
           </button>
-          <button>
+          <button
+           className={plan == 'pro' ? styles.planActive : undefined}
+           onClick={() => handlePlanChange(3)}
+          >
             <div><Image src={proImage} aria-hidden='true' alt='Pick the pro plan'/></div>
             <div className={styles.dummy}>
               <h3>Pro</h3>
