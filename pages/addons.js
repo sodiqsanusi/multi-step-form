@@ -57,11 +57,12 @@ const AddOns = () => {
         <h1>Pick add-ons</h1>
         <h2>Add-ons help enhance your gaming experience</h2>
         <section className={styles.layout}>
-          <label
-           htmlFor="onlineService" className={styles.addons}
-           onClick={() => handleAdding(0)}
-          >
-            <input type="checkbox" name="onlineService" id="onlineService"/>
+          <label htmlFor="onlineService" className={styles.addons}>
+            <input
+              type="checkbox" name="onlineService" id="onlineService"
+              onChange={() => handleAdding(0)}
+              checked={addons.indexOf(0) >= 0 ? true : false}
+            />
             <span className={styles.checkmarkIcon}><Image src={checkmarkIcon} aria-hidden='true' alt=""/></span>
             <div className={styles.mid}>
               <h3>Online service</h3>
@@ -69,11 +70,12 @@ const AddOns = () => {
             </div>
             <p>+${periods[renewal].words[0]}</p>
           </label>
-          <label
-           htmlFor="largerStorage" className={styles.addons}
-           onClick={() => handleAdding(1)}
-          >
-            <input type="checkbox" name="largerStorage" id="largerStorage"/>
+          <label htmlFor="largerStorage" className={styles.addons}>
+            <input
+              type="checkbox" name="largerStorage" id="largerStorage"
+              onChange={() => handleAdding(1)}
+              checked={addons.indexOf(1) >= 0 ? true : false}
+            />
             <span className={styles.checkmarkIcon}><Image src={checkmarkIcon} aria-hidden='true' alt=""/></span>
             <div className={styles.mid}>
               <h3>Larger storage</h3>
@@ -81,11 +83,12 @@ const AddOns = () => {
             </div>
             <p>+${periods[renewal].words[1]}</p>
           </label>
-          <label
-           htmlFor="customProfile" className={styles.addons}
-           onClick={() => handleAdding(2)}
-          >
-            <input type="checkbox" name="customProfile" id="customProfile"/>
+          <label htmlFor="customProfile" className={styles.addons}>
+            <input
+              type="checkbox" name="customProfile" id="customProfile"
+              onChange={() => handleAdding(2)}
+              checked={addons.indexOf(2) >= 0 ? true : false}
+            />
             <span className={styles.checkmarkIcon}><Image src={checkmarkIcon} aria-hidden='true' alt=""/></span>
             <div className={styles.mid}>
               <h3>Customizable profile</h3>

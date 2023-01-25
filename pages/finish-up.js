@@ -7,9 +7,10 @@ import styles from '../styles/finish-up.module.css';
 
 const FinishUp = () => {
 
-  let {setStage} = useContext(globalContext);
+  let {setStage, addons} = useContext(globalContext);
   useEffect(() => {
     setStage(4);
+    console.log(addons);
   }, [])
 
   return (
