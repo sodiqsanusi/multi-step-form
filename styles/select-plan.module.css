@@ -92,6 +92,11 @@
   right: 10%;
 }
 
+.planActive{
+  background-color: var(--magnolia) !important;
+  border-color: var(--marineBlue) !important;
+}
+
 
 @media(min-width: 700px){
   .layout{
