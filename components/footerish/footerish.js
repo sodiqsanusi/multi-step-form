@@ -48,8 +48,14 @@ const Footerish = () => {
 
   let handleNext = () => {
     if(router.pathname == '/'){
-      setValidity(confirmValidity(name, email, phoneNumber));
-      return;
+      let test = confirmValidity(name, email, phoneNumber);
+      for(let item in test){
+        if(!test[item]){
+          setValidity(test);
+          return;
+        }
+      }
+      setValidity(test);
     }
     if(routes[next]){
       router.push(routes[next])

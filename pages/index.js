@@ -8,10 +8,6 @@ export default function Home() {
 
   let {setStage, name, setName,
       email, setEmail, phoneNumber, setPhoneNumber, validity} = useContext(globalContext);
-  // let [name, setName] = useState('');
-  // let [email, setEmail] = useState('');
-  // let [phoneNumber, setPhoneNumber] = useState('');
-  
   
   useEffect(() => {
     setStage(1)
