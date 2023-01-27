@@ -22,6 +22,20 @@
   color: var(--coolGray);
 }.container input:hover, .container input:focus{
   border-color: var(--marineBlue);
+}.container label{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.invalidInfo{
+  color: var(--strawberryRed);
+  font-weight: 500;
+  display: none;
+}
+#invalid input{
+  border-color: var(--strawberryRed);
+}#invalid .invalidInfo{
+  display: block;
 }
 
 @media(min-width: 700px){

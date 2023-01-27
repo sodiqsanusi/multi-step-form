@@ -48,7 +48,7 @@ const Footerish = () => {
 
   let handleNext = () => {
     if(router.pathname == '/'){
-      console.log(confirmValidity(name, email, phoneNumber));
+      setValidity(confirmValidity(name, email, phoneNumber));
       return;
     }
     if(routes[next]){

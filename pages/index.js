@@ -6,7 +6,8 @@ import styles from '../styles/index.module.css';
 
 export default function Home() {
 
-  let {setStage, name, setName, email, setEmail, phoneNumber, setPhoneNumber} = useContext(globalContext);
+  let {setStage, name, setName,
+      email, setEmail, phoneNumber, setPhoneNumber, validity} = useContext(globalContext);
   // let [name, setName] = useState('');
   // let [email, setEmail] = useState('');
   // let [phoneNumber, setPhoneNumber] = useState('');
@@ -49,24 +50,33 @@ export default function Home() {
         <h1>Personal info</h1>
         <h2>Please provide your name, email address, and phone number.</h2>
         <form>
-          <div className={styles.container}>
-            <label htmlFor="name">Name</label>
+          <div className={styles.container} id={validity.name ? undefined : styles['invalid']}>
+            <label htmlFor="name">
+              <p>Name</p>
+              <p className={styles.invalidInfo}>This field is not valid</p> 
+            </label>
             <input
              type="text" name="Name" id="name"
              placeholder='e.g. Stephen King' value={name}
              onChange={(e) => {handleChange('name', e.target.value)}}
             />
           </div>
-          <div className={styles.container}>
-            <label htmlFor="email">Email Address</label>
+          <div className={styles.container} id={validity.email ? undefined : styles['invalid']}>
+            <label htmlFor="email">
+              <p>Email Address</p> 
+              <p className={styles.invalidInfo}>This field is not valid</p> 
+            </label>
             <input
              name="Email" id="email" type='email' 
              placeholder='e.g. stephenking@lorem.com' value={email}
              onChange={(e) => {handleChange('email', e.target.value)}}
             />
           </div>
-          <div className={styles.container}>
-            <label htmlFor="number">Phone Number</label>
+          <div className={styles.container} id={validity.phoneNum ? undefined : styles['invalid']}>
+            <label htmlFor="number">
+              <p>Phone Number</p> 
+              <p className={styles.invalidInfo}>This field is not valid</p> 
+            </label>
             <input
              type="text" name="Phone Number" id="number" inputMode='tel'
              placeholder='e.g. 08012345678' value={phoneNumber} maxLength='11'
