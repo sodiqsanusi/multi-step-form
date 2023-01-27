@@ -23,11 +23,21 @@ const Footerish = () => {
     let present = router.pathname;
     setNext(parseInt(getObjectKey(routes, present)) + 1);
     setPrevious(parseInt(getObjectKey(routes, present)) - 1);
-    if(routes[next]) router.prefetch(routes[next]);
-    if(routes[previous]) router.prefetch(routes[next]);
+    if(routes[next]) {
+      router.prefetch(routes[next]);
+      console.log(`Prefetched ${routes[next]}`);
+    };
+    if(routes[previous]){ 
+      router.prefetch(routes[previous])
+      console.log(`Prefetched ${routes[previous]}`);
+    };
   })
 
   let handleNext = () => {
+    if(router.pathname == '/'){
+      console.log('Okayy');
+      return;
+    }
     if(routes[next]){
       router.push(routes[next])
     }

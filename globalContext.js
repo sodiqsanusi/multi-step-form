@@ -7,10 +7,16 @@ export const GlobalProvider = ({children}) => {
   let [renewal, setRenewal] = useState('month');
   let [plan, setPlan] = useState('arcade');
   let [addons, setAddons] = useState([]);
+  // let [name, setName] = useState('');
+  // let [email, setEmail] = useState('');
+  // let [phoneNumber, setPhoneNumber] = useState('');
 
   return(
     <globalContext.Provider
-     value={{stage, setStage, renewal, setRenewal, plan, setPlan, addons, setAddons}}
+     value={{
+       stage, setStage, renewal, setRenewal, plan, setPlan, 
+       addons, setAddons
+      }}
     >
       {children}
     </globalContext.Provider>
