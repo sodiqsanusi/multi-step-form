@@ -6,15 +6,22 @@ import styles from '../styles/index.module.css';
 
 export default function Home() {
 
-  let {setStage} = useContext(globalContext);
-  let [name, setName] = useState('');
-  let [email, setEmail] = useState('');
-  let [phoneNumber, setPhoneNumber] = useState('');
+  let {setStage, name, setName, email, setEmail, phoneNumber, setPhoneNumber} = useContext(globalContext);
+  // let [name, setName] = useState('');
+  // let [email, setEmail] = useState('');
+  // let [phoneNumber, setPhoneNumber] = useState('');
   
   
   useEffect(() => {
     setStage(1)
   }, [])
+
+  let formatNumber = (data) => {
+    if(/\D/.test(data)) return undefined
+    else{
+      return data
+    }
+  }
 
   let handleChange = (type, dets) => {
     switch(type){
@@ -25,7 +32,8 @@ export default function Home() {
         setEmail(dets);
         break;
       case 'phoneNumber':
-        setPhoneNumber(dets);
+        let lilac = formatNumber(dets)
+        lilac != undefined ? setPhoneNumber(dets) : ''
         break;
       default:
         setName(dets);
@@ -61,7 +69,7 @@ export default function Home() {
             <label htmlFor="number">Phone Number</label>
             <input
              type="text" name="Phone Number" id="number" inputMode='tel'
-             placeholder='e.g. +1 234 567 890' value={phoneNumber}
+             placeholder='e.g. 08012345678' value={phoneNumber} maxLength='11'
              onChange={(e) => {handleChange('phoneNumber', e.target.value)}}
             />
           </div>
