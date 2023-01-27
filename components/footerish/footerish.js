@@ -1,8 +1,23 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import styles from './footerish.module.css';
 import { useRouter } from 'next/router';
+import { globalContext } from '../../globalContext';
 
 const Footerish = () => {
+
+  let {name, email, phoneNumber, setValidity} = useContext(globalContext);
+
+
+  let confirmValidity = (n, e, p) => {
+    let nameValid = /\w/.test(n);
+    let emailValid = /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/.test(e);
+    let numberValid = /\d/.test(p);
+    return {
+      name: nameValid,
+      email: emailValid,
+      phoneNum: numberValid
+    }
+  }
 
   let router = useRouter();
   let routes = {
@@ -23,11 +38,25 @@ const Footerish = () => {
     let present = router.pathname;
     setNext(parseInt(getObjectKey(routes, present)) + 1);
     setPrevious(parseInt(getObjectKey(routes, present)) - 1);
-    if(routes[next]) router.prefetch(routes[next]);
-    if(routes[previous]) router.prefetch(routes[next]);
+    if(routes[next]) {
+      router.prefetch(routes[next]);
+    };
+    if(routes[previous]){ 
+      router.prefetch(routes[previous])
+    };
   })
 
   let handleNext = () => {
+    if(router.pathname == '/'){
+      let test = confirmValidity(name, email, phoneNumber);
+      for(let item in test){
+        if(!test[item]){
+          setValidity(test);
+          return;
+        }
+      }
+      setValidity(test);
+    }
     if(routes[next]){
       router.push(routes[next])
     }
